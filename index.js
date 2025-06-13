@@ -20,6 +20,8 @@ app.post("/send", async (req, res) => {
 
   try {
     const transporter = nodemailer.createTransport({
+      // For this step make sure to configure your gmail to be used by the service
+      // Go the [Configure Gmail for Nodemailer] section in the README
       service: "gmail",
       auth: {
         user: process.env.EMAIL_USER,
