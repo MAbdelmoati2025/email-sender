@@ -22,13 +22,13 @@ app.post("/send", async (req, res) => {
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
-        user: "Mohamedabdelmoati315@gmail.com", // ده اللي هيبعت الرسالة فعليًا
+        user: "codexacademy50@gmail.com", // ده اللي هيبعت الرسالة فعليًا
         pass: process.env.EMAIL_PASS,
       },
     });
 
     await transporter.sendMail({
-      from: `"${name}" <Mohamedabdelmoati315@gmail.com>`, // الاسم بيبان للمستلم، لكن الإيميل ثابت
+      from: `"${name}" <codexacademy50@gmail.com>`, // الاسم بيبان للمستلم، لكن الإيميل ثابت
       to: receiver_email,
       subject,
       text: message,
