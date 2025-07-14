@@ -34,7 +34,7 @@ app.post("/send", async (req, res) => {
       text: message,
       html: `
     <div style="font-family: Arial, sans-serif; padding: 20px; color: #333;">
-      <h2 style="color: #0BCEAF;">📬 New Message from Portfolio Contact Form</h2>
+      <h2 style="color: #0BCEAF;">📬CodeX </h2>
       <p><strong>Name:</strong> ${name}</p>
       <p><strong>User's Email:</strong> ${email}</p>
       <p><strong>Subject:</strong> ${subject}</p>
@@ -43,7 +43,7 @@ app.post("/send", async (req, res) => {
         <pre style="white-space: pre-wrap; font-family: monospace;">${message}</pre>
       </div>
       <hr style="margin-top: 20px;" />
-      <small style="color: #888;">This message was sent via your portfolio site contact form.</small>
+      <small style="color: #888;">Codex</small>
     </div>
   `,
     });
