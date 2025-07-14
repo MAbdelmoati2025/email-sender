@@ -20,25 +20,23 @@ app.post("/send", async (req, res) => {
 
   try {
     const transporter = nodemailer.createTransport({
-      // For this step make sure to configure your gmail to be used by the service
-      // Go the [Configure Gmail for Nodemailer] section in the README
       service: "gmail",
       auth: {
-        user: process.env.EMAIL_USER,
+        user: "Mohamedabdelmoati315@gmail.com", // ده اللي هيبعت الرسالة فعليًا
         pass: process.env.EMAIL_PASS,
       },
     });
 
     await transporter.sendMail({
-      from: `"${name}" <${email}>`,
+      from: `"${name}" <Mohamedabdelmoati315@gmail.com>`, // الاسم بيبان للمستلم، لكن الإيميل ثابت
       to: receiver_email,
       subject,
-      text: message, // fallback for plain-text clients
+      text: message,
       html: `
     <div style="font-family: Arial, sans-serif; padding: 20px; color: #333;">
       <h2 style="color: #0BCEAF;">📬 New Message from Portfolio Contact Form</h2>
       <p><strong>Name:</strong> ${name}</p>
-      <p><strong>Email:</strong> ${email}</p>
+      <p><strong>User's Email:</strong> ${email}</p>
       <p><strong>Subject:</strong> ${subject}</p>
       <p><strong>Message:</strong></p>
       <div style="background: #f9f9f9; padding: 10px; border-left: 4px solid #0BCEAF;">
